@@ -5,7 +5,7 @@ package com.kaledou.domainobject.domain.entity.usersystem;
  * @author WWJ
  * 
  */
-public class Tag {
+public abstract class Tag {
 
 	protected Long tag_id;
 	protected String tagName;

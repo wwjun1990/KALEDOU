@@ -5,7 +5,7 @@ package com.kaledou.domainobject.domain.entity.usersystem;
  * @author WWJ
  * 
  */
-public class FollowUserRelationship {
+public abstract class FollowUserRelationship {
 
 	protected User follower;
 	protected User beFollowed;

@@ -5,7 +5,7 @@ package com.kaledou.domainobject.domain.entity.usersystem;
  * @author WWJ
  * 
  */
-public class UserInfo {
+public abstract class UserInfo {
 
 	protected Long u_id;
 	protected Boolean gender;

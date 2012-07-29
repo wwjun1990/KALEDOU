@@ -7,7 +7,7 @@ import java.util.List;
  * @author WWJ
  * 
  */
-public class User {
+public abstract class User {
 
 	protected Long u_id;
 	protected String name;

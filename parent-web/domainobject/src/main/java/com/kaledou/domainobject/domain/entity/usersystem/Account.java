@@ -5,7 +5,7 @@ package com.kaledou.domainobject.domain.entity.usersystem;
  * @author WWJ
  * 
  */
-public class Account {
+public abstract class Account {
 
 	protected Long u_id;
 	protected String username;
