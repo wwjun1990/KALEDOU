@@ -21,10 +21,10 @@ public class AccountAction extends BaseAction {
 		return null;
 	}
 
-	 //Renren weibo qq
-	 public String apiRegister() {
-	 return null;
-	 }
+	// Renren weibo qq
+	public String apiRegister() {
+		return null;
+	}
 
 	private String register() {
 		return null;
