@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="dataSource"
+		class="org.logicalcobwebs.proxool.ProxoolDataSource">
+		<property name="driver" value="com.mysql.jdbc.Driver" />
+		<property name="driverUrl" value="jdbc:mysql://localhost:3306/KALEDOU" />
+		<property name="user" value="root" />
+		<property name="password" value="123456" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">
+					update
+				</prop>
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.kaledou.datapersistence.entity.usersystem</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>

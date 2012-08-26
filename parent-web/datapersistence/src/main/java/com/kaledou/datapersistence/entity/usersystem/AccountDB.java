@@ -32,15 +32,15 @@ public class AccountDB extends Account {
 		super.setU_id(u_id);
 	}
 
-	@Column(name = "USERNAME", nullable = false)
+    @Column(name = "EMAIL", nullable = false)
 	@Override
-	public String getUsername() {
-		return super.getUsername();
+	public String getEmail() {
+		return super.getEmail();
 	}
 
 	@Override
-	public void setUsername(String username) {
-		super.setUsername(username);
+	public void setEmail(String email) {
+		super.setEmail(email);
 	}
 
 	@Column(name = "PASSWORD", nullable = false)

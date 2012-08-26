@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<include file="struts-default.xml"></include>
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="applicationResource" />
+	<package name="kaledou" extends="struts-default">
+	</package>
+	<package name="kaledouAjax" extends="json-default">
+		<action name="checkNicknameExist" class="accountAction" method="checkNicknameExist">
+			<result type="json" />
+		</action>
+		<action name="checkEmailExist" class="accountAction" method="checkEmailExist">
+			<result type="json" />
+		</action>
+	</package>
+</struts>

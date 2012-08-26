@@ -8,7 +8,7 @@ package com.kaledou.domainobject.domain.entity.usersystem;
 public abstract class Account {
 
 	protected Long u_id;
-	protected String username;
+	protected String email;
 	protected String password;
 
 	public Long getU_id() {
@@ -19,12 +19,12 @@ public abstract class Account {
 		this.u_id = u_id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

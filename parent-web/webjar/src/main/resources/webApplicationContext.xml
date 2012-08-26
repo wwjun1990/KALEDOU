@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- Action -->
+    <bean id="accountAction" class="com.kaledou.webjar.action.AccountAction" autowire="byName" scope="prototype"/>
+    <bean id="communicationAction" class="com.kaledou.webjar.action.CommunicationAction" autowire="byName" scope="prototype"/>
+    <bean id="userAction" class="com.kaledou.webjar.action.UserAction" autowire="byName" scope="prototype"/>
+	
+</beans>	

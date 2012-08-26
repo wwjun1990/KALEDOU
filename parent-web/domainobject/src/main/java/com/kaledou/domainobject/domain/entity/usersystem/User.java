@@ -1,22 +1,18 @@
 package com.kaledou.domainobject.domain.entity.usersystem;
 
-import java.util.List;
-
 /**
  * 
  * @author WWJ
  * 
  */
-public abstract class User {
+public abstract class User<U extends UserInfo, A extends Account> {
 
 	protected Long u_id;
-	protected String name;
-	protected String namePinYin;
-	protected UserInfo userInfo;
-	protected List<FollowUserRelationship> followerRelationship;
-	protected List<FollowUserRelationship> beFollowedRelationship;
+	protected String nickname;
+	protected String nicknamePinYin;
+	protected U userInfo;
 	protected String tagName;
-	protected Account account;
+	protected A account;
 
 	public Long getU_id() {
 		return u_id;
@@ -26,46 +22,28 @@ public abstract class User {
 		this.u_id = u_id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNickname() {
+		return nickname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 
-	public String getNamePinYin() {
-		return namePinYin;
+	public String getNicknamePinYin() {
+		return nicknamePinYin;
 	}
 
-	public void setNamePinYin(String namePinYin) {
-		this.namePinYin = namePinYin;
+	public void setNicknamePinYin(String nicknamePinYin) {
+		this.nicknamePinYin = nicknamePinYin;
 	}
 
-	public UserInfo getUserInfo() {
+	public U getUserInfo() {
 		return userInfo;
 	}
 
-	public void setUserInfo(UserInfo userInfo) {
+	public void setUserInfo(U userInfo) {
 		this.userInfo = userInfo;
-	}
-
-	public List<FollowUserRelationship> getFollowerRelationship() {
-		return followerRelationship;
-	}
-
-	public void setFollowerRelationship(
-			List<FollowUserRelationship> followerRelationship) {
-		this.followerRelationship = followerRelationship;
-	}
-
-	public List<FollowUserRelationship> getBeFollowedRelationship() {
-		return beFollowedRelationship;
-	}
-
-	public void setBeFollowedRelationship(
-			List<FollowUserRelationship> beFollowedRelationship) {
-		this.beFollowedRelationship = beFollowedRelationship;
 	}
 
 	public String getTagName() {
@@ -76,11 +54,11 @@ public abstract class User {
 		this.tagName = tagName;
 	}
 
-	public Account getAccount() {
+	public A getAccount() {
 		return account;
 	}
 
-	public void setAccount(Account account) {
+	public void setAccount(A account) {
 		this.account = account;
 	}
 
