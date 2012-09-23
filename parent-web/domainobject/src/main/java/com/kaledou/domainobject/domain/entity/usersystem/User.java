@@ -1,5 +1,7 @@
 package com.kaledou.domainobject.domain.entity.usersystem;
 
+import java.util.List;
+
 /**
  * 
  * @author WWJ
@@ -11,6 +13,8 @@ public abstract class User<U extends UserInfo, A extends Account> {
 	protected String nickname;
 	protected String nicknamePinYin;
 	protected U userInfo;
+	protected List<User> followUser;
+	protected List<User> beFollowedUser;
 	protected String tagName;
 	protected A account;
 
@@ -44,6 +48,22 @@ public abstract class User<U extends UserInfo, A extends Account> {
 
 	public void setUserInfo(U userInfo) {
 		this.userInfo = userInfo;
+	}
+
+	public List<User> getFollowUser() {
+		return followUser;
+	}
+
+	public void setFollowUser(List<User> followUser) {
+		this.followUser = followUser;
+	}
+
+	public List<User> getBeFollowedUser() {
+		return beFollowedUser;
+	}
+
+	public void setBeFollowedUser(List<User> beFollowedUser) {
+		this.beFollowedUser = beFollowedUser;
 	}
 
 	public String getTagName() {

@@ -10,6 +10,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -81,6 +82,28 @@ public class UserDB extends User<UserInfoDB, AccountDB> {
 	@OneToMany(mappedBy = "follower")
 	public List<FollowUserRelationshipDB> getFollowerRelationship() {
 		return followerRelationship;
+	}
+
+	@Transient
+	@Override
+	public List<User> getFollowUser() {
+		return super.getFollowUser();
+	}
+
+	@Override
+	public void setFollowUser(List<User> followUser) {
+		super.setFollowUser(followUser);
+	}
+
+	@Transient
+	@Override
+	public List<User> getBeFollowedUser() {
+		return super.getBeFollowedUser();
+	}
+
+	@Override
+	public void setBeFollowedUser(List<User> beFollowedUser) {
+		super.setBeFollowedUser(beFollowedUser);
 	}
 
 	public void setFollowerRelationship(
